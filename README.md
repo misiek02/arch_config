@@ -2,6 +2,7 @@
 
 Repozytorium zawierajace pliki konfiguracyjne systemu Arch Linux i srodowiska Hyprland. Zarzadzanie konfiguracja odbywa sie za pomoca narzedzia GNU Stow.
 
+![Wallpaper](./wallpaper/.config/hypr/wallpaper1.png)
 ## Dodawanie nowej konfiguracji
 
 1. Utworz folder dla nowej aplikacji odzwierciedlajacy sciezke wzgledem katalogu domowego:
