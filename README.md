@@ -7,7 +7,7 @@ Contact: michalsuski02@gmail.com
 
 ## Desktop Preview
 
-![My Wallpaper](./wallpaper/.config/hypr/wallpaper.jpg)
+![My Wallpaper](./wallpaper/.config/hypr/wallpaper1.png)
 
 ## SSH Key Configuration (Required before installation)
 
