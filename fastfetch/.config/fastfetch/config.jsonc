@@ -60,6 +60,11 @@
       "key": "| Mem",
       "keyColor": "blue"
     },
+    {
+      "type": "disk",
+      "key": "| Disk",
+      "keyColor": "blue"
+    },
     "break"
   ]
 }
