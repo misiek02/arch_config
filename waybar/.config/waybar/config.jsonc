@@ -1,15 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 20,
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory","battery" , "clock", "tray"],
+    "modules-right": ["battery", "clock"],
 
     "battery": {
-    "bat": "BAT0",
-    "adapter": "AC",
     "interval": 5,
     "states": {
         "warning": 30,
@@ -17,19 +15,12 @@
     },
     "format": "BAT: {capacity}%",
     "format-charging": "CHG: {capacity}%",
-    "format-plugged": "PLG: {capacity}%",
-    "format-alt": "{time} {icon}",
+    "format-plu": "PLG: {capacity}%",
+    "format-alt": "BAT: {capacity}%"
 },
     "clock": {
         "format": "{:%H:%M | %d.%m.%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "cpu": {
-        "format": "CPU: {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "RAM: {}%"
     }
 }
 
