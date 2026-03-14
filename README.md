@@ -1,32 +1,66 @@
 # Dotfiles
 
-Repozytorium zawierajace pliki konfiguracyjne systemu Arch Linux i srodowiska Hyprland. Zarzadzanie konfiguracja odbywa sie za pomoca narzedzia GNU Stow.
+Repository containing configuration files for Arch Linux and the Hyprland environment. Configuration management is handled using GNU Stow.
 
-![Wallpaper](./wallpaper/.config/hypr/wallpaper1.png)
-## Dodawanie nowej konfiguracji
+Author: misiek02
+Contact: michalsuski02@gmail.com
 
-1. Utworz folder dla nowej aplikacji odzwierciedlajacy sciezke wzgledem katalogu domowego:
-mkdir -p ~/dotfiles/aplikacja/.config/aplikacja
+## Desktop Preview
 
-2. Przenies plik konfiguracyjny z systemu do repozytorium:
-mv ~/.config/aplikacja/plik ~/dotfiles/aplikacja/.config/aplikacja/
+![My Wallpaper](./wallpaper/.config/hypr/wallpaper.jpg)
 
-3. Przejdz do katalogu glownego repozytorium:
+## SSH Key Configuration (Required before installation)
+
+Downloading a private repository or pushing changes requires generating and adding an SSH key to your GitHub account:
+
+```bash
+ssh-keygen -t ed25519 -C "michalsuski02@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+The displayed string must be copied and added to your GitHub account under Settings -> SSH and GPG keys.
+
+## Quick Installation on a New System
+
+Executing the following command will install required packages, clone the repository, and run the environment configuration script:
+
+```bash
+sudo pacman -S --noconfirm git && git clone git@github.com:misiek02/dotfiles.git ~/dotfiles && ~/dotfiles/install.sh
+```
+
+## Adding New Configurations
+
+1. Create a folder for the new application reflecting the path relative to the home directory:
+```bash
+mkdir -p ~/dotfiles/application/.config/application
+```
+
+2. Move the configuration file from the system to the repository:
+```bash
+mv ~/.config/application/configuration_file ~/dotfiles/application/.config/application/
+```
+
+3. Create symbolic links using stow:
+```bash
 cd ~/dotfiles
+stow application
+```
 
-4. Aktywuj dowiazania symboliczne programem stow:
-stow aplikacja
+## Pushing Changes to the Remote GitHub Repository
 
-## Wysylanie zmian do zdalnego repozytorium na GitHub
-
-1. Przejdz do katalogu repozytorium:
+1. Navigate to the repository directory and add files to the staging area:
+```bash
 cd ~/dotfiles
-
-2. Dodaj zmienione i nowe pliki do poczekalni:
 git add .
+```
 
-3. Zatwierdz zmiany komunikatem:
-git commit -m "Opis wprowadzonych zmian w plikach"
+2. Commit the changes with a message:
+```bash
+git commit -m "Description of introduced changes"
+```
 
-4. Wyslij stan lokalny do serwera zdalnego:
+3. Push the local state to the remote server:
+```bash
 git push
+```
