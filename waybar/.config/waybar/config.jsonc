@@ -8,17 +8,17 @@
     "modules-right": ["pulseaudio", "network", "cpu", "memory","battery" , "clock", "tray"],
 
     "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "interval": 5,
     "states": {
         "warning": 30,
         "critical": 15
     },
-    "interval": 2,
-    "full-at": 99,
     "format": "BAT: {capacity}%",
     "format-charging": "CHG: {capacity}%",
     "format-plugged": "PLG: {capacity}%",
     "format-alt": "{time} {icon}",
-    "tooltip": true
 },
     "clock": {
         "format": "{:%H:%M | %d.%m.%Y}",
