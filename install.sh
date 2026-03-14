@@ -8,7 +8,9 @@ sudo systemctl enable --now upower
 
 cd ~/dotfiles
 stow bash
+stow fastfetch
 stow hypr
+stow kitty
 stow wallpaper
 stow waybar
 stow wofi
