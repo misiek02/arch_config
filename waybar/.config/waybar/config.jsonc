@@ -5,7 +5,21 @@
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory","battery" , "clock", "tray"],
+
+    "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "interval": 2,
+    "full-at": 99,
+    "format": "BAT: {capacity}%",
+    "format-charging": "CHG: {capacity}%",
+    "format-plugged": "PLG: {capacity}%",
+    "format-alt": "{time} {icon}",
+    "tooltip": true
+},
     "clock": {
         "format": "{:%H:%M | %d.%m.%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
