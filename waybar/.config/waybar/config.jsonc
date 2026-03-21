@@ -24,7 +24,7 @@
         "format-wifi": "NET: {essid}",
         "format-ethernet": "NET: ETH",
         "format-disconnected": "NET: DOWN",
-        "format-disabled": "NET: OFF"
+        "format-disabled": "NET: OFF",
         "on-click": "~/dotfiles/scripts/hypr-conn-ctl.sh"
     },
 
