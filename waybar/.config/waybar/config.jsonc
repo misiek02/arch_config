@@ -2,25 +2,43 @@
     "layer": "top",
     "position": "top",
     "height": 20,
-    "spacing": 4,
+    "spacing": 10,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["battery", "clock"],
+    "modules-right": ["network", "battery", "clock", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "NET: {essid}",
+        "format-ethernet": "NET: ETH",
+        "format-disconnected": "NET: DOWN",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "nm-connection-editor"
+    },
 
     "battery": {
-    "interval": 5,
-    "states": {
-        "warning": 30,
-        "critical": 15
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT: {capacity}%",
+        "format-charging": "CHG: {capacity}%",
+        "format-plugged": "PLG: {capacity}%",
+        "format-alt": "BAT: {capacity}%"
     },
-    "format": "BAT: {capacity}%",
-    "format-charging": "CHG: {capacity}%",
-    "format-plu": "PLG: {capacity}%",
-    "format-alt": "BAT: {capacity}%"
-},
+
     "clock": {
         "format": "{:%H:%M | %d.%m.%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
     }
 }
-
