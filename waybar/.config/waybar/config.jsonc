@@ -8,7 +8,15 @@
     "modules-right": ["network", "battery", "clock", "tray"],
 
     "hyprland/workspaces": {
-        "format": "{name}"
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 40,
+        "separate-outputs": true
     },
 
     "network": {
