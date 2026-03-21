@@ -16,6 +16,8 @@ sudo pacman -S --noconfirm \
     upower yazi fastfetch code networkmanager network-manager-applet \
     bluez bluez-utils rfkill
 
+yay -S --noconfirm zen-browser-bin
+
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
