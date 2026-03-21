@@ -16,7 +16,8 @@ sudo pacman -S --noconfirm \
     upower yazi fastfetch code networkmanager network-manager-applet \
     bluez bluez-utils rfkill
 
-yay -S --noconfirm zen-browser-bin
+yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
+    otf-font-awesome brightnessctl light pavucontrol playerctl
 
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
