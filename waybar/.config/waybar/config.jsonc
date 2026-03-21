@@ -24,8 +24,7 @@
         "format-wifi": "NET: {essid}",
         "format-ethernet": "NET: ETH",
         "format-disconnected": "NET: DOWN",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "on-click": "nm-connection-editor"
+        "on-click": "~/dotfiles/scripts/hypr-conn-ctl.sh"
     },
 
     "battery": {
@@ -50,3 +49,4 @@
         "spacing": 10
     }
 }
+
