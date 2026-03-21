@@ -26,8 +26,13 @@ stow -R wofi
 chmod +x scripts/hypr-conn-ctl.sh
 chmod +x scripts/update-tty-login.sh
 
-sudo cp systemd/update-tty.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable update-tty.service
+# Konfiguracja override dla agetty, aby nie czyscil ekranu i uzywal skryptu
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+sudo cp systemd/getty_override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
-./scripts/update-tty-login.sh
+# Zmiana parametrów agetty dla tty1 (dodanie --noclear)
+sudo mkdir -p /etc/systemd/system/getty@.service.d
+echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty --noclear %I \$TERM" | sudo tee /etc/systemd/system/getty@.service.d/noclear.conf
+
+sudo systemctl daemon-reload
+sudo systemctl restart getty@tty1.service
