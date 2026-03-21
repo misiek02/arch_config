@@ -1,6 +1,16 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm
+sudo pacman -S --noconfirm --needed base-devel git
+
+if ! command -v yay &> /dev/null; then
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay
+    makepkg -si --noconfirm
+    cd ~/dotfiles
+fi
+
+sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
     git stow hyprland hyprpaper firefox kitty waybar wofi \
     upower yazi fastfetch code networkmanager network-manager-applet \
