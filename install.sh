@@ -17,7 +17,7 @@ sudo pacman -S --noconfirm \
     bluez bluez-utils rfkill
 
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
-    otf-font-awesome brightnessctl light pavucontrol playerctl
+    otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin
 
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
