@@ -19,6 +19,8 @@ sudo pacman -S --noconfirm \
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
     otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin
 
+yay -Sy --noconfirm hyprshot-gui
+
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
