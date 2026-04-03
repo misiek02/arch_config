@@ -1,6 +1,6 @@
 window {
     margin: 0px;
-    border: 2px solid #BB86FC; /* md_primary */
+    border: 2px solid #82B1FF; /* md_primary */
     background-color: #121212; /* md_background */
     font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font", sans-serif;
     border-radius: 8px;
@@ -35,7 +35,7 @@ window {
 }
 
 #entry:selected {
-    background-color: rgba(187, 134, 252, 0.4); /* md_primary alpha */
+    background-color: rgba(130, 177, 255, 0.4); /* md_primary alpha */
     outline: none;
 }
 
