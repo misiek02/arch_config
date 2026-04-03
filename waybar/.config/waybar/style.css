@@ -62,7 +62,7 @@
 }
 
 #workspaces button:hover {
-  background: rgba(187, 134, 252, 0.3); /* Stronger hover background */
+  background: @md_secondary;
   color: @md_on_background;
 }
 
@@ -102,7 +102,7 @@
   border-bottom-right-radius: 5px;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   margin-right: 0;
-  color: @md_secondary;
+  color: @md_primary;
 }
 
 /* Hover Effects - Improved contrast/readability */

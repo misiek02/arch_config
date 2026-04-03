@@ -15,9 +15,9 @@ sudo pacman -S --noconfirm \
     git stow hyprland hyprpaper firefox kitty waybar wofi \
     upower yazi fastfetch code networkmanager network-manager-applet \
     bluez bluez-utils rfkill unzip tlp tlp-rdw powertop blueman \
-    pipewire pipewire-pulse pipewire-alsa wireplumber
+    pipewire pipewire-pulse pipewire-alsa wireplumber waypaper python-pillow
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
-    otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin tlpui
+    otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin tlpui swww
 
 yay -Sy --noconfirm hyprshot-gui
 
