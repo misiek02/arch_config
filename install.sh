@@ -14,8 +14,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
     git stow hyprland hyprpaper firefox kitty waybar wofi \
     upower yazi fastfetch code networkmanager network-manager-applet \
-    bluez bluez-utils rfkill unzip tlp tlp-rdw powertop 
-
+    bluez bluez-utils rfkill unzip tlp tlp-rdw powertop blueman
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
     otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin tlpui
 
