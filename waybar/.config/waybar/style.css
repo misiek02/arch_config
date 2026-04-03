@@ -19,6 +19,7 @@
 /* --- Common Module Styles --- */
 #workspaces,
 #custom-uptime,
+#custom-power,
 #cpu,
 #clock,
 #custom-pomodoro,
@@ -124,6 +125,11 @@
 
 #custom-lock {
   color: @md_primary;
+}
+
+#custom-power {
+  color: @md_primary;
+  font-weight: 600;
 }
 
 #bluetooth.on {
