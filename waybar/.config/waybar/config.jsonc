@@ -9,6 +9,7 @@
   "modules-left": [
   "hyprland/workspaces",
   "custom/uptime",
+  "custom/power",
   "cpu"
   ],
 
