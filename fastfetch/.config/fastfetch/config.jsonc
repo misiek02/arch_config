@@ -24,6 +24,10 @@
   "logo": {
     "type": "small",
     "source": "arch",
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    },
     "padding": {
       "top": 0,
       "left": 0,
@@ -34,7 +38,8 @@
     {
       "type": "title",
       "key": "| User",
-      "keyColor": "magenta"
+      "keyColor": "blue",
+      "outputColor": "magenta"
     },
     {
       "type": "separator",

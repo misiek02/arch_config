@@ -3,6 +3,10 @@
   "logo": {
     "type": "small",
     "source": "arch",
+    "color": {
+      "1": "blue",
+      "2": "blue"
+    },
     "padding": {
       "top": 0,
       "left": 1,
@@ -13,7 +17,8 @@
     {
       "type": "title",
       "key": "| User",
-      "keyColor": "green"
+      "keyColor": "blue",
+      "outputColor": "magenta"
     },
     {
       "type": "separator",
