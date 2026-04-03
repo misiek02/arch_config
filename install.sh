@@ -14,17 +14,21 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
     git stow hyprland hyprpaper firefox kitty waybar wofi \
     upower yazi fastfetch code networkmanager network-manager-applet \
-    bluez bluez-utils rfkill unzip tlp tlp-rdw powertop blueman
+    bluez bluez-utils rfkill unzip tlp tlp-rdw powertop blueman \
+    pipewire pipewire-pulse pipewire-alsa wireplumber
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
     otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin tlpui
 
 yay -Sy --noconfirm hyprshot-gui
 
+# Enable system services
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
-
 sudo systemctl enable --now tlp.service
+
+# Enable PipeWire user services
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
 
