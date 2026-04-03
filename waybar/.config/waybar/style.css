@@ -58,7 +58,7 @@
 }
 
 #workspaces button.active {
-  color: #99d1db;
+  color: @md_secondary;
   background-color: rgba(153, 209, 219, 0.1);
   box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
 }
@@ -117,7 +117,7 @@
 /* --- Highlighted state for Pomodoro module when running (work or break) --- */
 #custom-pomodoro.work,
 #custom-pomodoro.break {
-  color: #99d1db; /* Text color consistent with active workspaces button */
+  color: @md_secondary; /* Text color consistent with active workspaces button */
   background-color: rgba(153, 209, 219, 0.1); /* Background color consistent with active workspaces button */
   box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); /* Inner shadow for outline effect */
   outline: none;
@@ -169,7 +169,7 @@
 }
 
 #clock {
-  color: #99d1db;
+  color: @md_secondary;
   font-weight: 500;
 }
 
@@ -199,10 +199,10 @@
   color: #2196f3;
 }
 #bluetooth.connected {
-  color: #99d1db;
+  color: @md_secondary;
 }
 #battery {
-  color: #99d1db;;
+  color: @md_secondary;;
 }
 #battery.charging {
   color: #a6d189;
@@ -222,5 +222,7 @@ tooltip {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-size: 12px;
 }
+
+
 
 

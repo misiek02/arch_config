@@ -34,7 +34,7 @@
     {
       "type": "title",
       "key": "| User",
-      "keyColor": "green"
+      "keyColor": "magenta"
     },
     {
       "type": "separator",

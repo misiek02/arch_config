@@ -1,22 +1,22 @@
 window {
     margin: 0px;
-    border: 2px solid #ffffff;
-    background-color: #111111;
-    font-family: "JetBrains Mono", monospace;
-    border-radius: 0px;
+    border: 2px solid #BB86FC; /* md_primary */
+    background-color: #121212; /* md_background */
+    font-family: "SF Pro Text", "Inter", "Segoe UI", "NotoSans Nerd Font", sans-serif;
+    border-radius: 8px;
 }
 
 #input {
-    margin: 5px;
-    border: none;
-    background-color: #222222;
-    color: #ffffff;
-    padding: 5px;
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1E1E1E; /* md_surface */
+    color: #FFFFFF; /* md_on_background */
+    padding: 8px;
+    border-radius: 6px;
 }
 
 #inner-box {
     margin: 5px;
-    background-color: #111111;
 }
 
 #outer-box {
@@ -25,20 +25,22 @@ window {
 
 #text {
     margin: 5px;
-    color: #ffffff;
+    color: #FFFFFF; /* md_on_background */
 }
 
 #entry {
     padding: 10px;
-    border-radius: 0px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
 }
 
 #entry:selected {
-    background-color: #ffffff;
-    color: #111111;
+    background-color: rgba(187, 134, 252, 0.4); /* md_primary alpha */
     outline: none;
 }
 
 #entry:selected #text {
-    color: #111111;
+    color: #FFFFFF; /* md_on_background */
+    font-weight: 600;
 }
+
