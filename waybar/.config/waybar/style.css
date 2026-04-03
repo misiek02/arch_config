@@ -140,6 +140,12 @@
   color: @md_primary;
 }
 
+#network.wifi,
+#network.ethernet,
+#network.linked {
+  color: @md_primary;
+}
+
 #battery.charging {
   color: #a6d189;
 }
