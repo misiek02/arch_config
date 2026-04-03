@@ -3,116 +3,25 @@
 /* --- Global Styles --- */
 * {
   font-family: 'SF Pro Text', 'Inter', 'Segoe UI', 'NotoSans Nerd Font', sans-serif;
-  font-size: 10px; /* Mandated by AI_context.md */
+  font-size: 11px; /* Slightly increased for better readability */
   min-height: 0;
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 /* --- Waybar Container --- */
 #waybar {
   background: transparent;
   color: @md_on_background;
-  margin: 0px;
   font-weight: 500;
 }
 
-/* --- Left Modules --- */
+/* --- Common Module Styles --- */
 #workspaces,
 #custom-uptime,
-#cpu {
-  background-color: @md_surface;
-  padding: 0.2rem 0.6rem;
-  margin: 4px 0px; 
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  min-width: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.2s ease-in-out;
-}
-
-#workspaces {
-  padding: 1px;
-  margin-left: 7px;
-  margin-right: 5px;
-}
-
-#custom-uptime {
-  margin-right: 5px;
-}
-
-#custom-uptime:hover,
-#cpu:hover {
-  background-color: rgba(187, 134, 252, 0.2); /* md_primary alpha */
-}
-
-#workspaces button {
-  color: @md_on_surface;
-  border-radius: 5px;
-  padding: 0.2rem 0.5rem;
-  background: transparent;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  outline: none;
-}
-
-#workspaces button.active {
-  color: @md_primary;
-  background-color: rgba(187, 134, 252, 0.1);
-  box-shadow: inset 0 0 0 1px rgba(187, 134, 252, 0.2);
-}
-
-#workspaces button:hover {
-  background: rgba(187, 134, 252, 0.2);
-  color: @md_on_background;
-}
-
-/* --- Center Module --- */
-#clock {
-  background-color: @md_surface;
-  padding: 0.2rem 0.7rem;
-  margin: 4px 0px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  min-width: 0;
-  border: 1px solid rgba(187, 134, 252, 0.3); /* Accentuated with primary color */
-  transition: all 0.2s ease-in-out;
-  color: @md_primary;
-}
-
-#clock:hover {
-  background-color: rgba(187, 134, 252, 0.1);
-}
-
-#custom-pomodoro {
-    background-color: @md_surface;
-    padding: 0.2rem 0.7rem;
-    margin: 4px 5px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    min-width: 0;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.2s ease-in-out;
-    color: @md_secondary;
-    font-weight: 600;
-}
-
-#custom-pomodoro:hover {
-    background-color: rgba(187, 134, 252, 0.2);
-    color: @md_on_background;
-    outline: 1px solid @md_primary;
-    outline-offset: -1px;
-}
-
-#custom-pomodoro.work,
-#custom-pomodoro.break {
-  color: @md_primary;
-  background-color: rgba(187, 134, 252, 0.1);
-  box-shadow: inset 0 0 0 1px rgba(187, 134, 252, 0.2);
-}
-
-/* --- Right Modules --- */
+#cpu,
+#clock,
+#custom-pomodoro,
 #bluetooth,
 #pulseaudio,
 #backlight,
@@ -120,48 +29,95 @@
 #custom-lock,
 #battery {
   background-color: @md_surface;
-  padding: 0.2rem 0.6rem;
-  margin: 4px 0px; 
-  border-radius: 0;
-  box-shadow: none;
-  min-width: 0;
-  border: none;
+  border-radius: 5px; /* Matching Hyprland rounding */
+  padding: 0.3rem 0.8rem;
+  margin: 0px 3px; /* Matching gaps_in/2 for spacing between modules */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.2s ease-in-out;
-  color: @md_on_surface;
 }
 
+/* --- Module Specific Overrides --- */
+
+/* Left Modules Grouping Logic */
+#workspaces {
+  margin-left: 0;
+  padding: 2px 6px;
+}
+
+#workspaces button {
+  color: @md_on_surface;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+#workspaces button.active {
+  color: @md_primary;
+  background-color: rgba(187, 134, 252, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(187, 134, 252, 0.3);
+}
+
+#workspaces button:hover {
+  background: rgba(187, 134, 252, 0.3); /* Stronger hover background */
+  color: @md_on_background;
+}
+
+/* Center Module Override */
+#clock {
+  border: 1px solid rgba(187, 134, 252, 0.4);
+  color: @md_primary;
+}
+
+#clock:hover {
+  background-color: rgba(187, 134, 252, 0.1);
+}
+
+/* Right Modules - Seamless Bar Effect */
+#bluetooth,
+#pulseaudio,
+#backlight,
+#network,
+#custom-lock,
+#battery {
+  margin: 0;
+  border-radius: 0;
+  border-left: none;
+  box-shadow: none;
+}
+
+#bluetooth {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  margin-left: 3px;
+}
+
+#battery {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  margin-right: 0;
+  color: @md_secondary;
+}
+
+/* Hover Effects - Improved contrast/readability */
+#custom-uptime:hover,
+#cpu:hover,
+#custom-pomodoro:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
 #backlight:hover,
 #network:hover,
 #custom-lock:hover,
 #battery:hover {
-  background-color: rgba(187, 134, 252, 0.2);
+  background-color: @md_primary_variant; /* Solid dark purple for hover */
+  color: @md_on_primary;
 }
 
-#bluetooth {
-  margin-left: 0px; 
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-#battery {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  margin-right: 7px;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  color: @md_secondary;
-}
-
-#custom-uptime {
-  color: @md_on_surface;
-}
-
-#cpu {
-  color: @md_on_surface;
-}
-
+/* Status Colors */
 #network.disconnected {
   color: @md_error;
 }
@@ -179,7 +135,7 @@
 }
 
 #battery.charging {
-  color: #a6d189; /* Keeping a distinct green for charging */
+  color: #a6d189;
 }
 
 #battery.warning:not(.charging) {
@@ -190,9 +146,8 @@
 tooltip {
   background-color: @md_background;
   color: @md_on_background;
-  padding: 5px 12px;
-  border-radius: 8px; /* Matching Wofi window rounding */
-  border: 2px solid @md_primary; /* Matching Wofi window border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  font-size: 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid @md_primary;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
