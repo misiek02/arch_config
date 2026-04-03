@@ -17,7 +17,7 @@ sudo pacman -S --noconfirm \
     bluez bluez-utils rfkill unzip tlp tlp-rdw powertop 
 
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
-    otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin
+    otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin tlpui
 
 yay -Sy --noconfirm hyprshot-gui
 
