@@ -65,17 +65,6 @@
       "key": "| Disk",
       "keyColor": "blue"
     },
-    {
-      "type": "battery",
-      "key": "| Bat",
-      "keyColor": "yellow"
-    },
-    {
-      "type": "custom",
-      "key": "| Pwr",
-      "keyColor": "yellow",
-      "format": "$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep energy-rate | awk '{print $2, $3}')"
-    },
     "break"
   ]
 }

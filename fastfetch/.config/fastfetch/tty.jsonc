@@ -24,11 +24,6 @@
       "key": "| OS",
       "keyColor": "blue"
     },
-    {
-      "type": "battery",
-      "key": "| Bat",
-      "keyColor": "yellow"
-    },
     "break"
   ]
 }
