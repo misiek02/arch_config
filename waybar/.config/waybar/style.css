@@ -68,12 +68,12 @@
 
 /* Center Module Override */
 #clock {
-  border: 1px solid rgba(187, 134, 252, 0.4);
+  border: 1px solid @md_primary;
   color: @md_primary;
 }
 
 #clock:hover {
-  background-color: rgba(187, 134, 252, 0.1);
+  background-color: @md_primary_variant;
 }
 
 /* Right Modules - Seamless Bar Effect */
@@ -87,6 +87,7 @@
   border-radius: 0;
   border-left: none;
   box-shadow: none;
+  color: @md_primary;
 }
 
 #bluetooth {
