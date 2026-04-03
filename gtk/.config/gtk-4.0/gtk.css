@@ -1,0 +1,17 @@
+@define-color accent_color #BB86FC;
+@define-color accent_bg_color #BB86FC;
+@define-color window_bg_color #121212;
+@define-color window_fg_color #FFFFFF;
+@define-color view_bg_color #1E1E1E;
+@define-color view_fg_color #FFFFFF;
+@define-color headerbar_bg_color #1E1E1E;
+@define-color headerbar_fg_color #FFFFFF;
+@define-color headerbar_border_color rgba(255, 255, 255, 0.1);
+@define-color headerbar_backdrop_color @headerbar_bg_color;
+@define-color card_bg_color #1E1E1E;
+@define-color card_fg_color #FFFFFF;
+@define-color card_border_color rgba(255, 255, 255, 0.1);
+
+window.background {
+    border-radius: 8px;
+}

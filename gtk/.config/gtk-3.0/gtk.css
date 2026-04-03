@@ -1,0 +1,26 @@
+@define-color theme_bg_color #121212;
+@define-color theme_fg_color #FFFFFF;
+@define-color theme_base_color #1E1E1E;
+@define-color theme_text_color #FFFFFF;
+@define-color theme_selected_bg_color #BB86FC;
+@define-color theme_selected_fg_color #000000;
+@define-color theme_tooltip_bg_color #121212;
+@define-color theme_tooltip_fg_color #FFFFFF;
+
+button {
+    border-radius: 6px;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+    background-color: rgba(187, 134, 252, 0.2);
+}
+
+entry {
+    border-radius: 6px;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
