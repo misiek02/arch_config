@@ -20,7 +20,7 @@
     "bluetooth",
     "network",
     "pulseaudio", 
-    "backlight",
+    // "backlight",
     "battery",
   ],
 

@@ -56,6 +56,7 @@ stow -R kitty
 stow -R wallpaper
 stow -R waybar
 stow -R wofi
+stow -R pavucontrol
 
 chmod +x scripts/hypr-conn-ctl.sh
 chmod +x scripts/update-tty-login.sh
