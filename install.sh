@@ -14,7 +14,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
     git stow hyprland hyprpaper firefox kitty waybar wofi \
     upower yazi fastfetch code networkmanager network-manager-applet \
-    bluez bluez-utils rfkill unzip 
+    bluez bluez-utils rfkill unzip tlp tlp-rdw powertop 
 
 yay -S --noconfirm zen-browser-bin ttf-jetbrains-mono-nerd ttf-font-awesome \
     otf-font-awesome brightnessctl light pavucontrol playerctl nmgui-bin
@@ -24,6 +24,26 @@ yay -Sy --noconfirm hyprshot-gui
 sudo systemctl enable --now upower
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now bluetooth
+
+sudo systemctl enable --now tlp.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+
+sudo tee /etc/systemd/system/powertop.service > /dev/null <<EOF
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now powertop.service
 
 sudo rfkill unblock bluetooth
 sudo rfkill unblock wifi
