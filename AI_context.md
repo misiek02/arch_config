@@ -97,6 +97,14 @@ Waybar Configuration:
 Installation Script (install.sh):
 - Removes default ~/.bashrc and ~/.bash_profile prior to executing stow bash to prevent conflicts.
 
+Custom Scripts (scripts/):
+- hypr-conn-ctl.sh: A Wofi-based menu for managing WiFi (via nmcli) and Bluetooth (via bluetoothctl) connections.
+- update-tty-login.sh: Updates /etc/issue using fastfetch to customize the TTY login screen.
+
+Systemd Services (systemd/):
+- update-tty.service: A oneshot service that runs update-tty-login.sh after network.target.
+- getty_override.conf: An override for getty@.service that runs update-tty-login.sh prior to starting the TTY.
+
 ## Instructions for AI Assistant
 
 1. All code must be in a code block. Do not generate code as common text.
